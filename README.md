@@ -1,0 +1,2 @@
+# SimplexDINDAUTO
+Simplex Method solver
