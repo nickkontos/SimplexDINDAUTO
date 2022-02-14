@@ -19,6 +19,8 @@ function SimplexDINDAUTO(A,b,f,type,min_max)
 
 min_dual=min_max;
 if (min_dual==1),
+    disp('Converting minimization problem to maximization');
+    disp(' ');
     A=transp(A);
     b=transp(b);
     f=transp(f);
@@ -100,12 +102,15 @@ disp([' ']);
  b=transp(b);
  f=transp(f);
  temp=f;f=b;b=temp;
- solution_vector=shadowprcs(1:1,end-size(b,1)+1:end);
+ solution_vector=flip(-shadowprcs(1:1,end-size(b,1)+1:end));
 % disp(['Your choice: PAIN  ']);
 % disp(['...  ']); 
  disp(['..Your choice: minimization  ']);
- disp(['Solution vector is  (',num2str(solution_vector),')']);
+ disp(' ');
+ sl=num2cell(solution_vector');
+ disp(['Solution vector is :']);
+ disp(sl);
  disp(['Minimized cost is  ',num2str(Z)]);
  end
-end 
  
+end
