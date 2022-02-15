@@ -102,7 +102,7 @@ disp([' ']);
  b=transp(b);
  f=transp(f);
  temp=f;f=b;b=temp;
- solution_vector=flip(-shadowprcs(1:1,end-size(b,1)+1:end));
+ solution_vector=flip(shadowprcs(1:1,end-size(b,1)+1:end));
 % disp(['Your choice: PAIN  ']);
 % disp(['...  ']); 
  disp(['..Your choice: minimization  ']);
