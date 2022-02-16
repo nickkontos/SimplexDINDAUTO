@@ -6,7 +6,7 @@ clc; clear all;
 format rat;            %ration output
 
 %Main input:
-%[A]{x}={b} inequality constraints 
+%[A]{x} <= / >= {b} inequality constraints 
 A=[4 3;2 4;1 1];
 %Are your constraints of the <= type?
 type=1; %"<=" --> type=1 ;">=" --> type=0
