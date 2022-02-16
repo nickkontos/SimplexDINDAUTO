@@ -1,5 +1,5 @@
 # SimplexDINDAUTO
-Simplex Method solver
+(basic) Simplex Method solver
 
 
 Simply download all the .m files to your prefered matlab path folder and run test.m
