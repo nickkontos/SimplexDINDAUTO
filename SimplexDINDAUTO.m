@@ -34,8 +34,7 @@ else
 end
 
 %Lower and upper bounds of variables
-lb=zeros(size(A,2) ,1);
-%ub=[1e4;1e4;1e4];
+%lb=zeros(size(A,2) ,1);
 
 Z=0;
 shadowprcs=zeros(1,size(A,1));
@@ -101,7 +100,7 @@ disp([' ']);
  b=transp(b);
  f=transp(f);
  temp=f;f=b;b=temp;
- solution_vector=flip(shadowprcs(1:1,end-size(b,1)+1:end));
+ solution_vector=shadowprcs(1:1,end-size(b,1)+1:end);
 % disp(['Your choice: PAIN  ']);
 % disp(['...  ']); 
  disp(['..Your choice: minimization  ']);
