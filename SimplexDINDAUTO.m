@@ -1,4 +1,4 @@
-function SimplexDINDAUTO(A,b,f,type,min_max)
+function [A,b,f,ses,shadowprcs,Z]=SimplexDINDAUTO(A,b,f,type,min_max)
 
 % This function and its companions implement the Simplex method
 % that is used to solving linear programming problems with the 
@@ -96,21 +96,21 @@ end
 
 disp(['Optimal solution found in  ',num2str(iter),' iterations of simplex' ]);
 disp([' ']); 
-
  if (min_dual==1),
  A=transp(A);
  b=transp(b);
  f=transp(f);
  temp=f;f=b;b=temp;
- solution_vector=flip(-shadowprcs(1:1,end-size(b,1)+1:end));
+ solution_vector=flip(shadowprcs(1:1,end-size(b,1)+1:end));
 % disp(['Your choice: PAIN  ']);
 % disp(['...  ']); 
  disp(['..Your choice: minimization  ']);
  disp(' ');
  sl=num2cell(solution_vector');
  disp(['Solution vector is :']);
- disp(sl);
+ disp([sl]);
  disp(['Minimized cost =  ',num2str(Z)]);
  end
- 
+ A=A;b=b;f=f;ses=ses;shadowprcs=shadowprcs;Z=Z;
 end 
+ 
