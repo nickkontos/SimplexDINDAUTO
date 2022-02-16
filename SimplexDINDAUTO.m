@@ -102,7 +102,7 @@ disp([' ']);
  b=transp(b);
  f=transp(f);
  temp=f;f=b;b=temp;
- solution_vector=flip(shadowprcs(1:1,end-size(b,1)+1:end));
+ solution_vector=flip(-shadowprcs(1:1,end-size(b,1)+1:end));
 % disp(['Your choice: PAIN  ']);
 % disp(['...  ']); 
  disp(['..Your choice: minimization  ']);
@@ -110,7 +110,7 @@ disp([' ']);
  sl=num2cell(solution_vector');
  disp(['Solution vector is :']);
  disp(sl);
- disp(['Minimized cost is  ',num2str(Z)]);
+ disp(['Minimized cost =  ',num2str(Z)]);
  end
  
-end
+end 
